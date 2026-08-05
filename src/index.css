@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F8F9FA;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-orange: #EA580C;
+  --color-brand-orange-hover: #C2410C;
+  --color-brand-muted: #666666;
+  --color-brand-body: #4A4A4A;
+  --color-brand-border: #EEEEEE;
+
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", "Poppins", sans-serif;
+  --font-handwriting: "Caveat", cursive;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Outfit", "Poppins", sans-serif;
+  }
+  .font-handwriting {
+    font-family: "Caveat", cursive;
+  }
+  .font-sans {
+    font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 12px;
+  }
+  body {
+    background-color: #0A0A0A;
+    color: #F8F9FA;
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Outfit", "Poppins", sans-serif;
+    letter-spacing: -0.01em;
+    color: #F8F9FA;
+  }
+}
