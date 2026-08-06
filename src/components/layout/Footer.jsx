@@ -5,18 +5,6 @@ import { CheckCircle2, Phone, Globe } from 'lucide-react';
 import { DOQUAD_CONTACT, SOCIAL_LINKS } from '../../constants/data';
 
 export default function Footer() {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    if (newsletterEmail.trim()) {
-      setSubscribed(true);
-      setNewsletterEmail('');
-      setTimeout(() => setSubscribed(false), 5000);
-    }
-  };
-
   return (
     <footer className="bg-[#1A1A1A] text-white pt-10 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 mt-12 sm:mt-16 border-t-4 border-[#EA580C]">
       <motion.div
@@ -27,58 +15,25 @@ export default function Footer() {
         className="px-4 sm:px-6 md:px-16 lg:px-[120px] max-w-[1440px] mx-auto"
       >
 
-        {/* Top Newsletter & Brand Bar */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 sm:pb-16 border-b border-[#2A2A2A] items-center">
-
-          {/* Brand Summary */}
-          <div className="lg:col-span-5 space-y-2 sm:space-y-3 text-center lg:text-left">
+        {/* Top Brand Bar */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 pb-10 sm:pb-12 border-b border-[#2A2A2A]">
+          <div className="space-y-2 text-center sm:text-left">
             <Link to="/" className="font-display text-2xl sm:text-3xl tracking-wide uppercase text-white block">
               FOODIE<span className="text-[#EA580C]">WORLD</span>.
             </Link>
-            <p className="font-sans text-xs sm:text-sm text-[#A0A0A0] max-w-sm mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p className="font-sans text-xs sm:text-sm text-[#A0A0A0] max-w-md leading-relaxed font-normal">
               Exploring culinary destinations, street food treasures, and authentic recipes across the globe. Join our community of 760K+ food enthusiasts.
             </p>
           </div>
 
-          {/* Newsletter Form */}
-          <div className="lg:col-span-7 font-sans">
-            <div className="bg-[#242424] border border-[#333333] p-4 sm:p-6 rounded-2xl">
-              <span className="font-handwriting font-bold text-xl sm:text-2xl text-[#EA580C] block mb-1">
-                Stay In The Tasty Loop ~
-              </span>
-              <h4 className="font-display text-base sm:text-xl text-white mb-1 uppercase tracking-wide">
-                Subscribe to Foodie World Newsletter
-              </h4>
-              <p className="text-[11px] sm:text-xs text-[#A0A0A0] mb-3 sm:mb-4 font-normal">
-                Get weekly food guides, secret restaurant spots, and video updates directly in your inbox.
-              </p>
-
-              {subscribed ? (
-                <div className="bg-[#2A3A2A] text-emerald-300 text-xs font-semibold px-4 py-3 rounded-full flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Thank you for subscribing! You'll receive our next food story soon.</span>
-                </div>
-              ) : (
-                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your email address"
-                    value={newsletterEmail}
-                    onChange={(e) => setNewsletterEmail(e.target.value)}
-                    className="flex-1 bg-[#1A1A1A] border border-[#3A3A3A] text-white text-xs px-4 py-3 rounded-full focus:outline-none focus:border-[#EA580C] placeholder-[#777777] transition-colors font-sans w-full"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-[#EA580C] text-white hover:bg-[#C2410C] text-xs font-semibold uppercase tracking-wider px-6 sm:px-7 py-3 rounded-full transition-colors whitespace-nowrap cursor-pointer shadow-md font-sans w-full sm:w-auto text-center"
-                  >
-                    Subscribe Now
-                  </button>
-                </form>
-              )}
-            </div>
-          </div>
-
+          <a
+            href={SOCIAL_LINKS.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#EA580C] hover:bg-[#C2410C] text-white text-xs font-bold uppercase tracking-wider px-6 py-3 rounded-full transition-all shadow-md flex items-center gap-2 shrink-0"
+          >
+            <span>Subscribe On YouTube</span>
+          </a>
         </div>
 
         {/* Navigation Links Columns (Poppins font) */}
