@@ -34,7 +34,7 @@ export default function Hero() {
           x: { duration: 1.2, ease: "easeOut" },
           y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
         }}
-        className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] pointer-events-none z-0 bg-no-repeat"
+        className="hidden lg:block absolute right-0 top-0 bottom-0 w-full lg:w-[65%] pointer-events-none z-0 bg-no-repeat"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundPosition: 'right -80px center',
@@ -44,7 +44,7 @@ export default function Hero() {
 
       {/* Precision Left-to-Right Fade Overlay */}
       <div
-        className="absolute inset-0 z-10 pointer-events-none"
+        className="absolute inset-0 z-10 pointer-events-none hidden lg:block"
         style={{
           background: 'linear-gradient(to right, #0A0A0A 0%, #0A0A0A 40%, rgba(10, 10, 10, 0.6) 70%, transparent 100%)'
         }}
@@ -54,16 +54,17 @@ export default function Hero() {
       <div className="w-full max-w-[1600px] mx-auto relative z-20 px-6 md:px-16 lg:px-[60px]">
         <div className="max-w-xl md:max-w-[600px] flex flex-col space-y-3 lg:space-y-4 text-left pt-6">
 
-          {/* Decorative Handwritten Tag */}
+          {/* Creator Name & Decorative Tag */}
           <motion.div
             initial={{ opacity: 0, x: -30, rotate: -4 }}
             whileInView={{ opacity: 1, x: 0, rotate: -2 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex items-center gap-2"
+            className="flex flex-col items-start gap-1"
           >
+            
             <span className="font-handwriting font-bold text-3xl lg:text-4xl text-[#EA580C]">
-              Hi, I'm a Food Explorer!
+              Hi, I'm Insamamul Hakh!
             </span>
           </motion.div>
 

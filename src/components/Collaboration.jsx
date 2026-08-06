@@ -16,37 +16,37 @@ export const CONTACT_INFO = {
 
 const featuredVideos = [
   {
-    id: "wP7Wlmmf5K0",
-    title: "First Vlog - 500 Foodie Malayalam",
-    subtitle: "Trending Food Vlog & Adventures",
+    id: "I_8io0O2rWo",
+    title: "Favorite Youtuber Special",
+    subtitle: "Trending Food Vlog & Spotlights",
     category: "FOOD VLOG",
-    url: "https://www.youtube.com/watch?v=wP7Wlmmf5K0",
-    thumbnail: "/images/gallery/street-food.jpg"
+    url: "https://www.youtube.com/shorts/I_8io0O2rWo",
+    thumbnail: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: "DRV6OSJouAo",
-    title: "Viral Vaccine Burger",
-    subtitle: "Unique Syringe Burger Review",
+    id: "3MouhqSBSO0",
+    title: "Viral Food Challenge",
+    subtitle: "Delicious Food Review & Tasting",
     category: "FOOD REVIEW",
-    url: "https://www.youtube.com/watch?v=DRV6OSJouAo",
-    thumbnail: "/images/gallery/burger.jpg"
+    url: "https://www.youtube.com/shorts/3MouhqSBSO0",
+    thumbnail: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: "V5QnR-3eZuM",
-    title: "Charcoal Fish Grill & Alfaham",
-    subtitle: "Hot & Smoky BBQ Special",
-    category: "GRILLS & BBQ",
-    url: "https://www.youtube.com/watch?v=V5QnR-3eZuM",
-    thumbnail: "/images/gallery/grill.jpg",
+    id: "BXQpV-3omUs",
+    title: "Malabar Flavor Trail",
+    subtitle: "Hot & Smoky Street Food Special",
+    category: "STREET FOOD",
+    url: "https://www.youtube.com/shorts/BXQpV-3omUs",
+    thumbnail: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=80",
     active: true
   },
   {
-    id: "KGptk6TuxiI",
-    title: "Kili Pokena Kulukki Sarbath",
-    subtitle: "Famous Malabar Refreshing Drink",
-    category: "COOL DRINKS",
-    url: "https://www.youtube.com/watch?v=KGptk6TuxiI",
-    thumbnail: "/images/gallery/cafe.jpg"
+    id: "p9YTPlZ_99I",
+    title: "World Cup Special Feast",
+    subtitle: "Foodie World Community Vlogs",
+    category: "SPECIAL VLOG",
+    url: "https://www.youtube.com/shorts/p9YTPlZ_99I",
+    thumbnail: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80"
   }
 ];
 

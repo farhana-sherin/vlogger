@@ -4,28 +4,28 @@ import { MapPin, ArrowRight, ChevronRight, Play } from 'lucide-react';
 
 const foodItems = [
   {
-    image: "/images/gallery/seafood.jpg",
-    title: "Kuttanadan Diaries & Food",
-    location: "Kuttanad, Alleppey",
-    url: "https://www.youtube.com/watch?v=Ts0Q3jrDSVs&list=PLHqOEuA-84e9Lyq6QFpbR4PRfeOaDiF7z&index=2"
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
+    title: "Viral Chocolate Dream Cake",
+    location: "Calicut, Kerala",
+    url: "https://www.youtube.com/shorts/4iotX5eCfes"
   },
   {
-    image: "/images/gallery/street-food.jpg",
-    title: "Mumbai Thattukada",
-    location: "Calicut",
-    url: "https://www.youtube.com/watch?v=OVKx0n2g9to&list=PLHqOEuA-84e9Lyq6QFpbR4PRfeOaDiF7z&index=5"
+    image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=80",
+    title: "Valanchery Must Try 5 Food Spots",
+    location: "Valanchery, Malappuram",
+    url: "https://www.youtube.com/shorts/paZrymJv5q4"
   },
   {
-    image: "/images/gallery/burger.jpg",
-    title: "Big Bun Theory",
-    location: "Thrissur",
-    url: "https://www.youtube.com/watch?v=DDPXc0kcJFE&list=PLHqOEuA-84e9Lyq6QFpbR4PRfeOaDiF7z&index=11"
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
+    title: "Kottakkal Viral Food Spots",
+    location: "Kottakkal, Malappuram",
+    url: "https://www.youtube.com/shorts/ZNY-kxqe5y8"
   },
   {
-    image: "/images/gallery/mandhi.jpg",
-    title: "Kawser Kuzhimandhi",
-    location: "Malappuram",
-    url: "https://www.youtube.com/watch?v=2UpnGDnD1-0&list=PLHqOEuA-84e9Lyq6QFpbR4PRfeOaDiF7z&index=12"
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    title: "Robot Biryani & Future Kitchen",
+    location: "Kochi, Kerala",
+    url: "https://www.youtube.com/shorts/p77Lg6fN_P4"
   }
 ];
 

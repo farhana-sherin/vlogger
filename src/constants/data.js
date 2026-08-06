@@ -84,13 +84,13 @@ export const FOOD_CATEGORIES = [
     youtubeUrl: "https://www.youtube.com/watch?v=OVKx0n2g9to&list=PLHqOEuA-84e_Reb_PgVIKS0pO82wsOi4n"
   },
   {
-    id: "juices",
-    title: "Fresh Juices",
-    subtitle: "Pure & Refreshing",
+    id: "soft-drinks",
+    title: "Soft Drinks",
+    subtitle: "Chilled & Refreshing",
     itemsCount: "Watch Playlist",
     iconName: "Drink",
-    image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=DRV6OSJouAo&list=PLHqOEuA-84e-kzi5GCHcinNgLOH4QBAfb"
+    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
+    youtubeUrl: "https://www.youtube.com/playlist?list=PLHqOEuA-84e-mUNaeTcjnxj-zDIk64Eal"
   },
   {
     id: "snacks",
@@ -177,7 +177,8 @@ export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/foodieworldhakh/",
   instagram: "https://instagram.com/foodie_world_hakh?igshid=YmMyMTA2M2Y=",
   youtube: "https://youtube.com/@foodieworldhakh",
-  vastgoedAgencyInstagram: "https://instagram.com/vastgoed_agency"
+  vastgoedAgencyInstagram: "https://instagram.com/vastgoed_agency",
+  vastgoedPropertiesInstagram: "https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx"
 };
 
 export const VASTGOED_AGENCY = {
@@ -193,9 +194,11 @@ export const VASTGOED_AGENCY = {
 };
 
 export const VASTGOED_REALESTATE = {
-  name: "Vastgoed Real Estate & Realty",
+  name: "Vastgoed Real Estate & Properties",
+  handle: "@vastgoed_properties",
   tagline: "Luxury Properties • Commercial Space • Land Investment",
   subTagline: "Premier real estate advisory, high-value property development & luxury villa sales.",
+  instagramUrl: "https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx",
   portfolioValue: "₹100Cr+",
   dealsCompleted: "50+",
   satisfiedClients: "250+",

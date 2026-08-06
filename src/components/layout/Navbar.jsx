@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InstagramIcon = (props) => (
@@ -75,20 +75,23 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-[#0A0A0A]/90 border-b border-white/5 text-white backdrop-blur-xl">
       <nav className="flex justify-between items-center h-[80px] px-6 md:px-16 lg:px-[60px] max-w-[1600px] mx-auto w-full">
 
-        {/* Logo matching the reference "Foodie EXPLORER" */}
-        <Link to="/" onClick={() => handleNavClick('/')} className="flex items-baseline gap-1.5 whitespace-nowrap">
-          <span className="font-handwriting font-bold text-3xl text-white">Foodie</span>
-          <span className="font-display font-black text-xs tracking-wider uppercase text-[#EA580C]">EXPLORER</span>
+        {/* Header Logo Image Only */}
+        <Link to="/" onClick={() => handleNavClick('/')} className="flex items-center group shrink-0">
+          <img
+            src="/images/logo1.png"
+            alt="Foodie World Logo"
+            className="h-14 sm:h-16 lg:h-18 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-10 xl:gap-10 font-sans">
+        {/* Desktop Navigation Centered */}
+        <div className="hidden lg:flex items-center justify-center gap-6 xl:gap-10 font-sans flex-1 mx-6 xl:mx-10">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
               onClick={() => handleNavClick(item.path)}
-              className={`text-[14px] font-semibold tracking-wider transition-colors cursor-pointer ${(item.path === '/contact' && location.pathname === '/contact') ||
+              className={`text-[14px] font-semibold tracking-wider transition-colors cursor-pointer whitespace-nowrap ${(item.path === '/contact' && location.pathname === '/contact') ||
                 (item.path === '/' && location.pathname === '/' && !location.hash)
                 ? 'text-[#EA580C] underline underline-offset-8 decoration-2'
                 : 'text-gray-300 hover:text-[#EA580C]'
@@ -99,8 +102,18 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Circular Action Icons matching the reference UI */}
+        {/* Circular Action Icons & Vastgoed Business Button */}
         <div className="flex items-center gap-3 font-sans">
+          <a
+            href="https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EA580C]/15 border border-[#EA580C]/40 text-[#EA580C] hover:bg-[#EA580C] hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all"
+            title="Vastgoed Properties - Real Estate"
+          >
+            <span>🏢</span> Vastgoed Properties
+          </a>
+
           <a
             href="https://instagram.com/foodie_world_hakh?igshid=YmMyMTA2M2Y="
             target="_blank"
@@ -119,12 +132,6 @@ export default function Navbar() {
           >
             <YoutubeIcon className="w-4 h-4" />
           </a>
-          <button
-            className="hidden sm:flex w-9 h-9 rounded-full border border-white/20 hover:border-white hover:bg-white/10 items-center justify-center text-white transition-all"
-            aria-label="Search"
-          >
-            <Search className="w-4 h-4" />
-          </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -164,6 +171,17 @@ export default function Navbar() {
                   <span>{item.name}</span>
                 </Link>
               ))}
+
+              <a
+                href="https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[13px] uppercase font-bold tracking-wider py-3 px-5 rounded-xl bg-[#EA580C]/20 border border-[#EA580C]/40 text-[#EA580C] flex items-center justify-between mt-1"
+              >
+                <span>🏢 Vastgoed Properties</span>
+                <span className="text-[10px] bg-[#EA580C] text-white px-2 py-0.5 rounded font-mono">INSTAGRAM</span>
+              </a>
+
               <div className="flex justify-center gap-4 pt-4 border-t border-white/10 mt-2">
                 <a
                   href="https://instagram.com/foodie_world_hakh?igshid=YmMyMTA2M2Y="

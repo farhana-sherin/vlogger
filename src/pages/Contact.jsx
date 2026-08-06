@@ -41,24 +41,100 @@ export default function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.message) return;
+    if (!formData.name || !formData.message || !formData.emailOrPhone) return;
 
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setFormData({
-        name: '',
-        emailOrPhone: '',
-        location: '',
-        inquiryType: 'Food Spot Suggestion',
-        message: ''
+    setErrorMessage('');
+
+    const apiKey = import.meta.env.VITE_BREVO_API_KEY || "";
+    const receiverEmail = import.meta.env.VITE_RECEIVER_EMAIL || "farhana23sherin9023@gmail.com";
+
+    const emailPayload = {
+      sender: {
+        name: "Foodie World Contact",
+        email: "farhana23sherin9023@gmail.com"
+      },
+      to: [
+        {
+          email: receiverEmail,
+          name: "Foodie World Admin"
+        }
+      ],
+      subject: `[Foodie World Contact] ${formData.inquiryType} from ${formData.name}`,
+      htmlContent: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #0A0A0A; color: #ffffff;">
+          <div style="max-width: 600px; margin: 0 auto; background-color: #121212; border: 1px solid #EA580C; border-radius: 16px; padding: 30px;">
+            <h2 style="color: #EA580C; margin-top: 0; font-size: 22px; text-transform: uppercase; border-bottom: 2px solid #EA580C; padding-bottom: 12px;">
+              New Website Message Received
+            </h2>
+            <table style="width: 100%; color: #e0e0e0; font-size: 14px; margin-top: 15px; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 10px 0; font-weight: bold; width: 140px; color: #EA580C;">Full Name:</td>
+                <td style="padding: 10px 0; color: #ffffff;">${formData.name}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; font-weight: bold; color: #EA580C;">Email / Phone:</td>
+                <td style="padding: 10px 0; color: #ffffff;">${formData.emailOrPhone}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; font-weight: bold; color: #EA580C;">Location / City:</td>
+                <td style="padding: 10px 0; color: #ffffff;">${formData.location || 'Not specified'}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; font-weight: bold; color: #EA580C;">Inquiry Topic:</td>
+                <td style="padding: 10px 0; font-weight: bold; color: #ffffff;">${formData.inquiryType}</td>
+              </tr>
+            </table>
+
+            <div style="margin-top: 25px; background-color: #1A1A1A; border-left: 4px solid #EA580C; padding: 18px; border-radius: 8px;">
+              <h4 style="margin: 0 0 10px 0; color: #EA580C; font-size: 14px; text-transform: uppercase;">Message Content:</h4>
+              <p style="margin: 0; color: #ffffff; white-space: pre-wrap; font-size: 14px; line-height: 1.6;">${formData.message}</p>
+            </div>
+
+            <p style="font-size: 12px; color: #777777; margin-top: 30px; text-align: center; border-top: 1px solid #222222; padding-top: 15px;">
+              This inquiry was submitted from the Foodie World official website contact page.
+            </p>
+          </div>
+        </div>
+      `
+    };
+
+    try {
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'api-key': apiKey,
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(emailPayload)
       });
-      setTimeout(() => setSubmitted(false), 6000);
-    }, 700);
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          emailOrPhone: '',
+          location: '',
+          inquiryType: 'Food Spot Suggestion',
+          message: ''
+        });
+        setTimeout(() => setSubmitted(false), 8000);
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Brevo API Error:', errorData);
+        setErrorMessage('Could not deliver email. Please try again or reach out on WhatsApp directly.');
+      }
+    } catch (err) {
+      console.error('Email Submit Error:', err);
+      setErrorMessage('Network connection error. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -215,6 +291,12 @@ export default function Contact() {
                     <h3 className="font-display text-2xl font-bold uppercase text-white mb-1">Send A Direct Message</h3>
                     <p className="text-xs text-gray-400">Fill out the form below and we'll get back to you as soon as possible.</p>
                   </div>
+
+                  {errorMessage && (
+                    <div className="bg-red-500/10 border border-red-500/40 text-red-400 text-xs p-3 rounded-xl">
+                      {errorMessage}
+                    </div>
+                  )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                     {/* Name Input */}
