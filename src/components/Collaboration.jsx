@@ -81,7 +81,9 @@ export default function Collaboration({ showContactBanners = true }) {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#gallery"
+            href={SOCIAL_LINKS.youtube || "https://www.youtube.com/@foodieworldhakh"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="border border-[#EA580C] text-[#EA580C] hover:bg-[#EA580C] hover:text-white px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-1 transition-all self-start sm:self-auto"
           >
             VIEW ALL VIDEOS <ChevronRight className="w-3 h-3" />
