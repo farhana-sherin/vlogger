@@ -51,12 +51,13 @@ export default function Contact() {
     setErrorMessage('');
 
     const apiKey = import.meta.env.VITE_BREVO_API_KEY || "";
-    const receiverEmail = import.meta.env.VITE_RECEIVER_EMAIL || "farhana23sherin9023@gmail.com";
+    const receiverEmail = import.meta.env.VITE_RECEIVER_EMAIL || "";
+    const senderEmail = import.meta.env.VITE_SENDER_EMAIL || receiverEmail;
 
     const emailPayload = {
       sender: {
         name: "Foodie World Contact",
-        email: "farhana23sherin9023@gmail.com"
+        email: senderEmail
       },
       to: [
         {
@@ -64,42 +65,84 @@ export default function Contact() {
           name: "Foodie World Admin"
         }
       ],
-      subject: `[Foodie World Contact] ${formData.inquiryType} from ${formData.name}`,
+      subject: `📩 [Foodie World] New ${formData.inquiryType} from ${formData.name}`,
       htmlContent: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #0A0A0A; color: #ffffff;">
-          <div style="max-width: 600px; margin: 0 auto; background-color: #121212; border: 1px solid #EA580C; border-radius: 16px; padding: 30px;">
-            <h2 style="color: #EA580C; margin-top: 0; font-size: 22px; text-transform: uppercase; border-bottom: 2px solid #EA580C; padding-bottom: 12px;">
-              New Website Message Received
-            </h2>
-            <table style="width: 100%; color: #e0e0e0; font-size: 14px; margin-top: 15px; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; width: 140px; color: #EA580C;">Full Name:</td>
-                <td style="padding: 10px 0; color: #ffffff;">${formData.name}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; color: #EA580C;">Email / Phone:</td>
-                <td style="padding: 10px 0; color: #ffffff;">${formData.emailOrPhone}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; color: #EA580C;">Location / City:</td>
-                <td style="padding: 10px 0; color: #ffffff;">${formData.location || 'Not specified'}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; color: #EA580C;">Inquiry Topic:</td>
-                <td style="padding: 10px 0; font-weight: bold; color: #ffffff;">${formData.inquiryType}</td>
-              </tr>
-            </table>
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b;">
+          <div style="padding: 30px 15px; background-color: #f8fafc;">
+            <div style="max-width: 580px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);">
+              
+              <!-- Header Bar -->
+              <div style="background-color: #ea580c; padding: 24px 30px; text-align: left;">
+                <div style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #ffedd5; margin-bottom: 4px;">
+                  Foodie World • Contact Inquiry
+                </div>
+                <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px;">
+                  New Message Received
+                </h1>
+              </div>
 
-            <div style="margin-top: 25px; background-color: #1A1A1A; border-left: 4px solid #EA580C; padding: 18px; border-radius: 8px;">
-              <h4 style="margin: 0 0 10px 0; color: #EA580C; font-size: 14px; text-transform: uppercase;">Message Content:</h4>
-              <p style="margin: 0; color: #ffffff; white-space: pre-wrap; font-size: 14px; line-height: 1.6;">${formData.message}</p>
+              <!-- Main Content Body -->
+              <div style="padding: 30px;">
+                
+                <p style="margin: 0 0 20px 0; font-size: 14px; color: #64748b; line-height: 1.5;">
+                  You received a new inquiry through your official website contact form. Here are the submission details:
+                </p>
+
+                <!-- Information Table -->
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 0; font-size: 13px; font-weight: 700; color: #64748b; text-transform: uppercase; width: 140px;">Full Name</td>
+                    <td style="padding: 12px 0; font-size: 15px; font-weight: 600; color: #0f172a;">${formData.name}</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 0; font-size: 13px; font-weight: 700; color: #64748b; text-transform: uppercase;">Email / Phone</td>
+                    <td style="padding: 12px 0; font-size: 15px; font-weight: 600; color: #ea580c;">
+                      <a href="mailto:${formData.emailOrPhone}" style="color: #ea580c; text-decoration: none;">${formData.emailOrPhone}</a>
+                    </td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 0; font-size: 13px; font-weight: 700; color: #64748b; text-transform: uppercase;">Location / City</td>
+                    <td style="padding: 12px 0; font-size: 15px; font-weight: 500; color: #334155;">${formData.location || 'Not specified'}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; font-size: 13px; font-weight: 700; color: #64748b; text-transform: uppercase;">Inquiry Topic</td>
+                    <td style="padding: 12px 0;">
+                      <span style="display: inline-block; background-color: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; font-size: 13px; font-weight: 700; padding: 4px 12px; rounded: 9999px; border-radius: 20px;">
+                        ${formData.inquiryType}
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Message Box -->
+                <div style="background-color: #fafafa; border: 1px solid #e7e5e4; border-left: 4px solid #ea580c; border-radius: 12px; padding: 20px; margin-bottom: 10px;">
+                  <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; tracking: 1px; color: #ea580c; margin-bottom: 8px;">
+                    Message Details
+                  </div>
+                  <div style="font-size: 14px; color: #292524; line-height: 1.6; white-space: pre-wrap; font-weight: 400;">
+                    ${formData.message}
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Footer -->
+              <div style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 16px 30px; text-align: center;">
+                <p style="margin: 0; font-size: 12px; color: #94a3b8;">
+                  Sent automatically from <strong style="color: #64748b;">Foodie World Website</strong>
+                </p>
+              </div>
+
             </div>
-
-            <p style="font-size: 12px; color: #777777; margin-top: 30px; text-align: center; border-top: 1px solid #222222; padding-top: 15px;">
-              This inquiry was submitted from the Foodie World official website contact page.
-            </p>
           </div>
-        </div>
+        </body>
+        </html>
       `
     };
 
@@ -183,21 +226,6 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-4 pt-2">
-                  {/* Email Card */}
-                  <a
-                    href={`mailto:${DOQUAD_CONTACT.email}`}
-                    className="flex items-center gap-4 p-4 rounded-2xl bg-[#1A1A1A] border border-white/5 hover:border-[#EA580C]/50 transition-colors group"
-                  >
-                    <div className="w-11 h-11 rounded-xl bg-[#EA580C]/10 border border-[#EA580C]/30 text-[#EA580C] flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <div className="overflow-hidden">
-                      <span className="text-[10px] font-semibold uppercase text-gray-400 tracking-wider">Email Address</span>
-                      <p className="text-xs font-bold text-white group-hover:text-[#EA580C] transition-colors truncate">
-                        {DOQUAD_CONTACT.email}
-                      </p>
-                    </div>
-                  </a>
 
                   {/* Phone / WhatsApp Card */}
                   <a
