@@ -87,7 +87,7 @@ export default function VastgoedAgency() {
 
           {/* Centered Section Divider: — OUR BRAND — */}
           <div className="flex items-center justify-center gap-4">
-            
+
           </div>
 
           {/* MAIN BRAND CONTAINER CARD */}
@@ -109,7 +109,7 @@ export default function VastgoedAgency() {
                     />
                   </div>
 
-                  {/* Brand Title & Stats */}
+                  {/* Brand Title */}
                   <div className="flex-1 space-y-3">
                     <div>
                       <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white leading-tight">
@@ -120,37 +120,6 @@ export default function VastgoedAgency() {
                       </p>
                       {/* Short Orange Line */}
                       <div className="w-14 h-[2.5px] bg-[#EA580C] my-3 mx-auto sm:mx-0" />
-                    </div>
-
-                    {/* Stats Row with Vertical Dividers */}
-                    <div className="flex items-center justify-center sm:justify-start gap-6 text-sm font-sans pt-1">
-                      <div className="flex items-center gap-2.5">
-                        <FileCheck className="w-5 h-5 text-[#EA580C]" />
-                        <div className="text-left">
-                          <strong className="text-white font-bold block text-base sm:text-lg leading-none">30</strong>
-                          <span className="text-xs text-gray-400 uppercase tracking-wider">Posts</span>
-                        </div>
-                      </div>
-
-                      <div className="h-7 w-[1px] bg-white/15" />
-
-                      <div className="flex items-center gap-2.5">
-                        <Users className="w-5 h-5 text-[#EA580C]" />
-                        <div className="text-left">
-                          <strong className="text-white font-bold block text-base sm:text-lg leading-none">1,529</strong>
-                          <span className="text-xs text-gray-400 uppercase tracking-wider">Followers</span>
-                        </div>
-                      </div>
-
-                      <div className="h-7 w-[1px] bg-white/15" />
-
-                      <div className="flex items-center gap-2.5">
-                        <UserCheck className="w-5 h-5 text-[#EA580C]" />
-                        <div className="text-left">
-                          <strong className="text-white font-bold block text-base sm:text-lg leading-none">2</strong>
-                          <span className="text-xs text-gray-400 uppercase tracking-wider">Following</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
