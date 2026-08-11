@@ -50,7 +50,6 @@ export default function Navbar() {
     { name: 'Categories', path: '/#categories' },
     { name: 'Food Spots', path: '/#gallery' },
     { name: 'Videos', path: '/#videos' },
-    { name: 'Vastgoed Properties', path: '/vastgoed-properties' },
     { name: 'Contact', path: '/contact' },
   ];
 
