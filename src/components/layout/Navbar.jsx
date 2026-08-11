@@ -50,6 +50,7 @@ export default function Navbar() {
     { name: 'Categories', path: '/#categories' },
     { name: 'Food Spots', path: '/#gallery' },
     { name: 'Videos', path: '/#videos' },
+    { name: 'Vastgoed Properties', path: '/vastgoed-properties' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -104,15 +105,13 @@ export default function Navbar() {
 
         {/* Circular Action Icons & Vastgoed Business Button */}
         <div className="flex items-center gap-3 font-sans">
-          <a
-            href="https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EA580C]/15 border border-[#EA580C]/40 text-[#EA580C] hover:bg-[#EA580C] hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all"
+          <Link
+            to="/vastgoed-properties"
+            className="hidden xl:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EA580C]/15 border border-[#EA580C]/40 text-[#EA580C] hover:bg-[#EA580C] hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all"
             title="Vastgoed Properties - Real Estate"
           >
             <span>🏢</span> Vastgoed Properties
-          </a>
+          </Link>
 
           <a
             href="https://instagram.com/foodie_world_hakh?igshid=YmMyMTA2M2Y="
@@ -172,15 +171,14 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <a
-                href="https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/vastgoed-properties"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-[13px] uppercase font-bold tracking-wider py-3 px-5 rounded-xl bg-[#EA580C]/20 border border-[#EA580C]/40 text-[#EA580C] flex items-center justify-between mt-1"
               >
                 <span>🏢 Vastgoed Properties</span>
-                <span className="text-[10px] bg-[#EA580C] text-white px-2 py-0.5 rounded font-mono">INSTAGRAM</span>
-              </a>
+                <span className="text-[10px] bg-[#EA580C] text-white px-2 py-0.5 rounded font-mono">PAGE</span>
+              </Link>
 
               <div className="flex justify-center gap-4 pt-4 border-t border-white/10 mt-2">
                 <a

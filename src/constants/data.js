@@ -76,80 +76,82 @@ export const GALLERY_ITEMS = [
 export const FOOD_CATEGORIES = [
   {
     id: "biryani",
-    title: "Biryani",
+    title: "Biryani Specials",
     subtitle: "Aromatic & Flavorful",
-    itemsCount: "Watch Playlist",
+    itemsCount: "Watch Short",
     iconName: "Bowl",
     image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=OVKx0n2g9to&list=PLHqOEuA-84e_Reb_PgVIKS0pO82wsOi4n"
+    youtubeUrl: "https://www.youtube.com/shorts/BqivF3KKzr4"
   },
   {
-    id: "soft-drinks",
-    title: "Soft Drinks",
+    id: "juices",
+    title: "Juices & Drinks",
     subtitle: "Chilled & Refreshing",
-    itemsCount: "Watch Playlist",
+    itemsCount: "Watch Short",
     iconName: "Drink",
     image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/playlist?list=PLHqOEuA-84e-mUNaeTcjnxj-zDIk64Eal"
-  },
-  {
-    id: "snacks",
-    title: "Snacks",
-    subtitle: "Crispy & Crunchy",
-    itemsCount: "Watch Playlist",
-    iconName: "Snack",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=0GvNQ47KKHA&list=PLHqOEuA-84e8-8phW7vdXen5X8dHRlUPf"
+    youtubeUrl: "https://www.youtube.com/shorts/mB6X62a4AYQ"
   },
   {
     id: "cakes",
     title: "Cakes & Bakes",
     subtitle: "Sweet & Irresistible",
-    itemsCount: "Watch Playlist",
+    itemsCount: "Watch Short",
     iconName: "Cupcake",
     image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=dpYvfEnomhw&list=PLHqOEuA-84e8F7vifUBXiS6PYhAc7Vyyl"
+    youtubeUrl: "https://www.youtube.com/shorts/36arwvHu2Ec"
+  },
+  {
+    id: "loaded-fries",
+    title: "Loaded Fries",
+    subtitle: "Crispy, Cheesy & Loaded",
+    itemsCount: "Watch Short",
+    iconName: "Snack",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80",
+    youtubeUrl: "https://www.youtube.com/shorts/ozPwGPGb5j0"
   },
   {
     id: "icecreams",
     title: "Ice Creams",
     subtitle: "Cold & Creamy",
-    itemsCount: "Watch Playlist",
+    itemsCount: "Watch Short",
     iconName: "IceCream",
-    image: "https://images.unsplash.com/photo-1560008511-11c63416e52d?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=0GvNQ47KKHA&list=PLHqOEuA-84e8g3_3hyl8s_rfeCP28J11T"
+    image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=800&q=80",
+    youtubeUrl: "https://www.youtube.com/shorts/p5HkzpRc5f4"
   },
   {
-    id: "pizza",
-    title: "Pizza",
-    subtitle: "Cheesy & Hot",
-    itemsCount: "Watch Playlist",
-    iconName: "Pizza",
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=6RBO5A-flNA&list=PLHqOEuA-84e8lNTXwm-pieQ4HcsiAs9bE"
+    id: "mandhi",
+    title: "Malabar Mandhi",
+    subtitle: "Smoky, Juicy & Tender",
+    itemsCount: "Watch Short",
+    iconName: "Bowl",
+    image: "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80",
+    youtubeUrl: "https://www.youtube.com/shorts/ZNY-kxqe5y8"
   },
   {
-    id: "grills",
-    title: "Grills & BBQ",
-    subtitle: "Hot & Smoky",
-    itemsCount: "Watch Playlist",
-    iconName: "Skewer",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=V5QnR-3eZuM&list=PLHqOEuA-84e9AVRuV3xnFV1NAOcEVtP1q"
+    id: "choorum-meenum",
+    title: "Choorum Meenum",
+    subtitle: "Kerala Fish Meals & Fry",
+    itemsCount: "Watch Short",
+    iconName: "Bowl",
+    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
+    youtubeUrl: "https://www.youtube.com/shorts/vuOolDP66dM"
   },
   {
-    id: "street-food",
-    title: "Street Foods",
-    subtitle: "Quick & Delicious",
-    itemsCount: "Watch Playlist",
-    iconName: "Burger",
-    image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=80",
-    youtubeUrl: "https://www.youtube.com/watch?v=KGptk6TuxiI&list=PLHqOEuA-84e-ZMSHnIixHNugDhXjmjHh0"
+    id: "momos",
+    title: "Momos & Dim Sums",
+    subtitle: "Steamed, Fried & Juicy",
+    itemsCount: "Watch Short",
+    iconName: "Snack",
+    image: "https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=800&q=80",
+    youtubeUrl: "https://www.youtube.com/shorts/Vbs1cpL0XJM"
   }
 ];
 
 export const CHANNEL_INFO = {
   name: "FOODIE World",
+  vloggerName: "Insamamul Hakh",
+  vloggerFullName: "Insamamul Hakh (Foodie World)",
   handle: "@foodieworldhakh",
   tagline: "Where every flavor tells a story 🍽️",
   subscribers: "770K+",
@@ -194,10 +196,16 @@ export const VASTGOED_AGENCY = {
 };
 
 export const VASTGOED_REALESTATE = {
-  name: "Vastgoed Real Estate & Properties",
+  name: "Vastgoed Properties",
   handle: "@vastgoed_properties",
-  tagline: "Luxury Properties • Commercial Space • Land Investment",
-  subTagline: "Premier real estate advisory, high-value property development & luxury villa sales.",
+  category: "Property Company / Real Estate Agents",
+  location: "HiLITE Business Park",
+  locationFull: "📍 HiLITE Business Park, Calicut",
+  phone: "9656374000",
+  phoneFormatted: "+91 9656374000",
+  whatsappUrl: "https://wa.me/919656374000",
+  tagline: "Buy, Sell & Lease of all range of commercial, business and residential properties",
+  subTagline: "Premier real estate agents located at HiLITE Business Park. Specialists in Buy, Sell & Lease of all range of commercial, business and residential properties.",
   instagramUrl: "https://www.instagram.com/vastgoed_properties?igsh=NWY1azkzMHllNHcx",
   portfolioValue: "₹100Cr+",
   dealsCompleted: "50+",

@@ -13,7 +13,7 @@ export default function About() {
           ABOUT <span className="text-[#EA580C]">FOODIE WORLD</span>
         </h1>
         <p className="font-sans text-[#4A4A4A] text-base lg:text-lg max-w-2xl mt-4 leading-relaxed font-normal">
-          Exploring authentic street food, traditional heritage kitchens, and culinary destinations across Kerala and beyond.
+          Follow YouTuber Insamamul Hakh as he explores authentic street food, traditional heritage kitchens, and culinary destinations across Kerala and beyond.
         </p>
       </div>
 

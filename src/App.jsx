@@ -16,6 +16,7 @@ export default function App() {
           <Route path="business-page" element={<VastgoedAgency />} />
           <Route path="agency" element={<VastgoedAgency />} />
           <Route path="vastgoed" element={<VastgoedAgency />} />
+          <Route path="vastgoed-properties" element={<VastgoedAgency />} />
           <Route path="vastgoed-agency" element={<VastgoedAgency />} />
           <Route path="vastgoed-group" element={<VastgoedAgency />} />
           {/* Fallback route */}

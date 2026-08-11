@@ -76,7 +76,7 @@ export default function AboutMe() {
             >
               <img
                 src={aboutProfileImage}
-                alt="Foodie World Creator & Explorer"
+                alt="Insamamul Hakh - Foodie World Creator & Food Vlogger"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover object-center relative z-10 filter brightness-95 group-hover:brightness-105 transition-all duration-500"
@@ -108,12 +108,12 @@ export default function AboutMe() {
           >
             {/* Handwritten Accent (Caveat font) */}
             <span className="font-handwriting font-bold text-2xl lg:text-3xl text-[#EA580C] block mb-1">
-              Get To Know The Explorer ~
+              Meet YouTuber Insamamul Hakh ~
             </span>
 
             {/* Main Display Title */}
             <h2 className="font-display text-4xl lg:text-5xl tracking-wide uppercase text-white leading-tight font-black">
-              ABOUT <span className="text-[#EA580C]">THE EXPLORER</span>
+              ABOUT <span className="text-[#EA580C]">INSAMAMUL HAKH</span>
             </h2>
           </motion.div>
 
@@ -126,7 +126,7 @@ export default function AboutMe() {
             className="font-sans space-y-4 text-gray-300 text-base leading-relaxed"
           >
             <p>
-              Hey there! I'm the face behind <strong>Foodie World</strong>. My mission is simple: journey across cities, discover legendary heritage kitchens, taste authentic street food, and give you 100% honest reviews.
+              Hey there! I'm <strong className="text-white text-lg font-bold">Insamamul Hakh</strong>, the popular food vlogger, YouTuber, and creator behind <strong className="text-[#EA580C]">Foodie World (@foodieworldhakh)</strong>. My mission is simple: journey across cities, discover legendary heritage kitchens, taste authentic street food, and give you 100% honest reviews.
             </p>
             <p>
               From 70-year-old woodfire Malabar Biryani spots in Calicut to viral international food trends, I test everything so you always know <span className="font-handwriting font-bold text-xl text-[#EA580C] inline-block">what's worth your time and money!</span>

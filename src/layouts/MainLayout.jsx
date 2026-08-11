@@ -12,7 +12,7 @@ function ScrollToHash() {
     if (hash) {
       const id = hash.replace('#', '');
       // Small timeout to allow page component rendering
-      
+
       const timer = setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -30,7 +30,7 @@ function ScrollToHash() {
 
 export default function MainLayout() {
   const { pathname } = useLocation();
-  const isAgencyPage = ['/business', '/business-page', '/agency', '/vastgoed', '/vastgoed-agency', '/vastgoed-group'].includes(pathname);
+  const isAgencyPage = ['/business', '/business-page', '/agency', '/vastgoed', '/vastgoed-agency', '/vastgoed-group', '/vastgoed-properties'].includes(pathname);
 
   return (
     <div className="min-h-screen font-sans antialiased flex flex-col justify-between transition-colors duration-300 bg-[#0A0A0A] text-white">
